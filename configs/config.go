@@ -3,7 +3,8 @@ package configs
 import "github.com/spf13/viper"
 
 type conf struct {
-	WebServerPort string `mapstructure:"WEB_SERVER_PORT"`
+	WebServerPort          string `mapstructure:"WEB_SERVER_PORT"`
+	RateLimiterMaxRequests string `mapstructure:"RATE_LIMITER_MAX_REQUESTS"`
 }
 
 func LoadConfig(path string) (*conf, error) {
